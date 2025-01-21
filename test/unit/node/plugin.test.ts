@@ -38,10 +38,12 @@ describe("plugin", () => {
         "proxy-domain": [],
         config: "~/.config/code-server/config.yaml",
         verbose: false,
+        "disable-file-downloads": false,
         usingEnvPassword: false,
         usingEnvHashedPassword: false,
         "extensions-dir": "",
         "user-data-dir": "",
+        "session-socket": "",
       }
       next()
     }
@@ -69,7 +71,7 @@ describe("plugin", () => {
     expect(body).toStrictEqual([
       {
         name: "Test App",
-        version: "4.0.0",
+        version: "4.0.1",
 
         description: "This app does XYZ.",
         iconPath: "/test-plugin/test-app/icon.svg",
